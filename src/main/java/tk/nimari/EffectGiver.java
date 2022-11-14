@@ -11,20 +11,16 @@ public class EffectGiver {
 
         // TODO: Make this better somehow?
 
-        if (!player.isOp()) {
+        if (!player.isOp())
             for (PotionEffectType possibleEffect : PotionEffectType.values())
-                if (player.hasPermission("pe." + possibleEffect.getName().toLowerCase())) {
-                    System.out.println("pe." + possibleEffect.getName().toLowerCase());
+                if (player.hasPermission("pe." + possibleEffect.getName().toLowerCase()))
                     player.addPotionEffect(new PotionEffect(possibleEffect, Integer.MAX_VALUE, 0, false, false));
-                } else {
+                else
                     for (int i = 0; i < 256; i++)
                         if (player.hasPermission("pe." + possibleEffect.getName().toLowerCase() + "." + i)) {
                             player.addPotionEffect(new PotionEffect(possibleEffect, Integer.MAX_VALUE, i, false, false));
                             break;
-
                         }
-                }
-        }
 
 
     }
