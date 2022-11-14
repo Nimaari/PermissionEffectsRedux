@@ -1,9 +1,8 @@
-author: LPkkjHD
-name: PermissionEffects
-version: 0.1-SNAPSHOT
-website: http://freemine.de/
-main: de.freemine.permissioneffects.Main
+author: Nimari
+name: PermissionEffectsRedux
+main: nimari.tk.Main
+description: Spigot plugin that gives players Potion Effects based on permission.
 commands:
-  PermissionEffects:
+  permissioneffects:
     aliases: [pe]
     permission: pe.admin
