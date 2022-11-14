@@ -15,13 +15,8 @@ public class Command implements CommandExecutor {
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-
-            if (player.hasPermission("pe.admin")) {
-                reloadPermissionEffects();
-                player.sendMessage("§8[§bPermissionEffects§8] §aSuccessfully reloaded.");
-            } else {
-                player.sendMessage("§8[§bPermissionEffects§8] §cNo permissions.");
-            }
+            reloadPermissionEffects();
+            player.sendMessage("§8[§bPermissionEffects§8] §aSuccessfully reloaded.");
 
         } else {
             reloadPermissionEffects();
